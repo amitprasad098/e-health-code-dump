@@ -1,0 +1,37 @@
+/* Practice Styles */
+.card {
+    border: 1px solid #ddd; /* Add a border to the card */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    background-color: rgb(221, 244, 228);
+    border-color: black;
+    margin-bottom: 10px;
+    overflow-y: auto; 
+    max-height: calc(100vh - 100px);
+  }
+  
+  .card-body {
+    padding: 20px; /* Add padding inside the card body */
+  }
+  
+  .card-title {
+    font-size: 18px; /* Set the font size for the practice name */
+    font-weight: bold; /* Make the practice name bold */
+    margin-bottom: 10px; /* Add margin at the bottom of the practice name */
+  }
+  
+  .card-text {
+    font-size: 14px; /* Set the font size for the practice description and address */
+    margin-bottom: 5px; /* Add margin at the bottom of the practice description and address */
+  }
+  
+  .row-cols-md-4 .col {
+    flex: 0 0 25%; /* Set column width to 25% for medium and larger devices */
+  }
+
+  .card:hover {
+    border: 1px solid #ddd; /* Add a border to the card */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    background-color: rgb(227, 233, 210);
+    border-color: black;
+  }
+  

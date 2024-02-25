@@ -1,0 +1,557 @@
+{
+	"info": {
+		"_postman_id": "f70a727c-84d3-4f82-864a-14fd959da058",
+		"name": "Electronic Healthcare",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16921647"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All User Types",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/types",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All Practices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/practices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"practices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\" : \"Tanvi Patil\",\n    \"userEmail\" : \"tanvipatil2@gmail.com\",\n    \"userPassword\" : \"tanvi0503\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Sign In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userEmail\" : \"tanvipatil2@gmail.com\",\n    \"userPassword\" : \"tanvi12334\",\n    \"userRole\" : \"Patient\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/sign-in",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User to Practice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userEmail\" : \"amitprasad@gmail.com\",\n    \"userRole\" : \"Patient\",\n    \"practiceName\" : \"University Health Service\",\n    \"userDateOfBirth\" : \"2024-02-17\",\n    \"userAddress\" : \"Bassett, SO17 3QB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/practice/registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"practice",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All Pending Practice Registration Requests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/practice/registration/requests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"practice",
+						"registration",
+						"requests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Approve Pending Practice Registration Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/practice/registration/requests/approve/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"practice",
+						"registration",
+						"requests",
+						"approve",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decline Pending Practice Registration Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/practice/registration/requests/decline/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"practice",
+						"registration",
+						"requests",
+						"decline",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All Appointment Types",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/appointments/types",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appointments",
+						"types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Status of User Practice Registration Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/practice/registration/status/2/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"practice",
+						"registration",
+						"status",
+						"2",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book An Appointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"appointmentTypeId\" : 1,\n    \"userPracticeRegistrationId\" : 4,\n    \"appointmentDescription\" : \"Taking the appointment for a regular checkup\",\n    \"appointmentDate\" : \"2024-02-19\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/appointments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appointments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All Pending Appointment Requests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/appointments/requests/pending",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appointments",
+						"requests",
+						"pending"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Approve Pending Appointment Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/appointments/requests/approve/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appointments",
+						"requests",
+						"approve",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decline Pending Appointment Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/appointments/requests/decline/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appointments",
+						"requests",
+						"decline",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Offer alternative appointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"appointmentBookingId\" : 1,\n    \"alternativeMessage\" : \"Please change appointment date to 24/02/2024\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/appointments/requests/alternative",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appointments",
+						"requests",
+						"alternative"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All Approved Appointment Requests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/appointments/requests/approved",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appointments",
+						"requests",
+						"approved"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Patient Prescription by Appointment Booking Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/patients/prescription/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"patients",
+						"prescription",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Medical History by User Practice Registration Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/medical-history/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medical-history",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Patient Prescription",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"appointmentBookingId\" : 8,\n    \"testOrdered\" : \"all tests\",\n    \"prescriptionDetails\" : \"prescription details\",\n    \"specialistReferral\" : 1,\n    \"prescriptionDate\" : \"2024-02-21\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/patients/prescription",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"patients",
+						"prescription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Medical History",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"appointmentBookingId\" : 8,\n    \"medicalHistoryDetails\" : \"medical history details\",\n    \"medicalHistoryDate\" : \"2024-02-21\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/medical-history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medical-history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password Code Generate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/forgot-password/amitprasad1326@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"forgot-password",
+						"amitprasad1326@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"recipient\" : \"amitprasad132@gmail.com\",\n    \"msgBody\" : \"Hey! This is a test email\",\n    \"subject\" : \"Test Email from Spring Boot Application\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sendMail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sendMail"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
